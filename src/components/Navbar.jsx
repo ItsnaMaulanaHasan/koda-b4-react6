@@ -3,7 +3,7 @@ import { SquarePen } from "lucide-react";
 function Navbar() {
   return (
     <header>
-      <nav className="bg-white z-2 fixed w-full px-10 py-5 flex justify-between items-center">
+      <nav className="bg-white z-2 fixed w-full px-10 py-5 flex justify-between items-center top-0">
         <div className="flex items-center h-10 gap-10">
           <img className="h-3/4" src="/public/icon/Medium-Wordmark-Black.svg" alt="medium wordmark black" />
           <form className="flex items-center p-[10px] bg-slate-50 gap-2 rounded-full">

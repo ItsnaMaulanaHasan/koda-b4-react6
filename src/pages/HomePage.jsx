@@ -57,17 +57,19 @@ function HomePage() {
             </ul>
           </nav>
           {/* Top Article */}
-          <div className="flex gap-5">
-            <img className="max-w-1/2" src={topArticle.image} alt="" />
-            <div className="flex flex-col gap-3">
-              <h1 className="font-semibold text-4xl">{topArticle.title}</h1>
-              <p className="line-clamp-3">{topArticle.content}</p>
-              <div className="flex gap-2 items-center text-gray-500 text-sm">
-                <img className="rounded-full overflow-hidden h-5 w-5" src={topArticle.creator.avatar} alt={topArticle.creator.name} />
-                <div>{topArticle.creator.name}</div>•<div>{moment(topArticle.publishedAt).format("MMM DD")}</div>•<div>{topArticle.readTime} min read</div>
+          <Link className="flex" to={`/${topArticle.creator.name}/${topArticle.slug}`}>
+            <div className="flex gap-5">
+              <img className="max-w-1/2" src={topArticle.image} alt="" />
+              <div className="flex flex-col gap-3">
+                <h1 className="font-semibold text-4xl">{topArticle.title}</h1>
+                <p className="line-clamp-3">{topArticle.content}</p>
+                <div className="flex gap-2 items-center text-gray-500 text-sm">
+                  <img className="rounded-full overflow-hidden h-5 w-5" src={topArticle.creator.avatar} alt={topArticle.creator.name} />
+                  <div>{topArticle.creator.name}</div>•<div>{moment(topArticle.publishedAt).format("MMM DD")}</div>•<div>{topArticle.readTime} min read</div>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
           {/* List Article */}
           <div className="grid grid-cols-3 gap-5">
             {restArticles.map((article) => (
