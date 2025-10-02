@@ -9,7 +9,7 @@ function App() {
       element: <HomePage />,
     },
     {
-      path: "/:username/:slug",
+      path: "/:creator/:slug",
       element: <Article />,
     },
   ]);
