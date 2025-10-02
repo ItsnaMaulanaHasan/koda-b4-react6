@@ -1,7 +1,26 @@
 import Navbar from "../components/Navbar";
+import moment from "moment";
 import { Link } from "react-router-dom";
+import { getData } from "../utils/getData";
+import { useEffect, useState } from "react";
 
 function HomePage() {
+  const [dataArticles, setDataArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    getData("/public/data/articles.json").then((data) => {
+      setDataArticles(data);
+      setIsLoading(false);
+    });
+  }, []);
+
+  const topArticle = dataArticles[0];
+
+  if (isLoading) {
+    return <div className="flex justify-center items-center h-screen">Loading...</div>;
+  }
+
   return (
     <>
       <Navbar />
@@ -11,7 +30,7 @@ function HomePage() {
           <img className="" src="/public/img/img-home.webp" alt="Image headerj home" />
         </div>
         {/* Header */}
-        <div iv className="flex flex-col gap-10 px-40 py-10">
+        <div className="flex flex-col gap-10 px-40 py-10">
           <div className="flex justify-between">
             <div className="flex gap-5 max-w-[70%]">
               <img className="h-25 w-25 border border-slate-300" src="/public/img/logo-fazztrack.jpeg" alt="" />
@@ -37,14 +56,19 @@ function HomePage() {
             </ul>
           </nav>
           {/* Top Article */}
-          <div className="flex items-center">
-            <img src="" alt="" />
-            <div>
-              <h1>Bootstrapping Project CodeIgniter4 menggunakan Docker</h1>
-              <p></p>
+          <div className="flex gap-5">
+            <img className="max-w-1/2" src={topArticle.image} alt="" />
+            <div className="flex flex-col gap-3">
+              <h1 className="font-semibold text-4xl">{topArticle.title}</h1>
+              <p className="line-clamp-3">{topArticle.content}</p>
+              <div className="flex gap-2 items-center text-gray-500 text-sm">
+                <img className="rounded-full overflow-hidden h-5 w-5" src={topArticle.creator.avatar} alt={topArticle.creator.name} />
+                <div>{topArticle.creator.name}</div>•<div>{moment(topArticle.publishedAt).format("MMM DD")}</div>•<div>{topArticle.readTime} min read</div>
+              </div>
             </div>
           </div>
           {/* List Article */}
+          <div className="grid grid-cols-3"></div>
         </div>
       </main>
     </>
