@@ -14,7 +14,7 @@ function Article() {
 
   useEffect(() => {
     getData("/public/data/articles.json").then((data) => {
-      const [dataArticle] = data.filter((data) => data.creator.name === creator && data.slug === slug);
+      const dataArticle = data.find((data) => data.creator.name === creator && data.slug === slug);
       setDataArticles(dataArticle);
       setIsLoading(false);
     });
