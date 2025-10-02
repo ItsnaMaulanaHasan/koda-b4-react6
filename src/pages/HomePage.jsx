@@ -3,6 +3,7 @@ import moment from "moment";
 import { Link } from "react-router-dom";
 import { getData } from "../utils/getData";
 import { useEffect, useState } from "react";
+import CardArticle from "../components/CardArticle";
 
 function HomePage() {
   const [dataArticles, setDataArticles] = useState([]);
@@ -15,7 +16,7 @@ function HomePage() {
     });
   }, []);
 
-  const topArticle = dataArticles[0];
+  const [topArticle, ...restArticles] = dataArticles;
 
   if (isLoading) {
     return <div className="flex justify-center items-center h-screen">Loading...</div>;
@@ -30,7 +31,7 @@ function HomePage() {
           <img className="" src="/public/img/img-home.webp" alt="Image headerj home" />
         </div>
         {/* Header */}
-        <div className="flex flex-col gap-10 px-40 py-10">
+        <div className="flex flex-col gap-10 px-40 overflow-hidden py-10">
           <div className="flex justify-between">
             <div className="flex gap-5 max-w-[70%]">
               <img className="h-25 w-25 border border-slate-300" src="/public/img/logo-fazztrack.jpeg" alt="" />
@@ -68,7 +69,13 @@ function HomePage() {
             </div>
           </div>
           {/* List Article */}
-          <div className="grid grid-cols-3"></div>
+          <div className="grid grid-cols-3 gap-5">
+            {restArticles.map((article) => (
+              <Link id={article.id} className="flex" to={`/${article.creator.name}/${article.slug}`}>
+                <CardArticle articleData={article} />
+              </Link>
+            ))}
+          </div>
         </div>
       </main>
     </>
