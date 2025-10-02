@@ -67,7 +67,7 @@ function HomePage() {
             <div className="flex flex-col gap-2 sm:gap-3 w-full md:w-1/2">
               <h1 className="font-semibold text-2xl sm:text-3xl md:text-4xl line-clamp-2">{topArticle.title}</h1>
               <p className="line-clamp-3 sm:line-clamp-4 text-sm sm:text-base text-gray-700">{topArticle.content}</p>
-              <div className="flex gap-2 items-center text-gray-500 text-xs sm:text-sm mt-auto">
+              <div className="flex gap-2 items-center text-gray-500 text-xs sm:text-sm">
                 <img className="rounded-full h-5 w-5 sm:h-6 sm:w-6 object-cover" src={topArticle.creator.avatar} alt={topArticle.creator.name} />
                 <span className="truncate max-w-[120px] sm:max-w-none">{topArticle.creator.name}</span>
                 <span>•</span>
@@ -80,7 +80,7 @@ function HomePage() {
           {/* List Article */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {restArticles.map((article) => (
-              <Link id={article.id} className="" to={`/${article.creator.name}/${article.slug}`}>
+              <Link key={article.id} className="" to={`/${article.creator.name}/${article.slug}`}>
                 <CardArticle articleData={article} />
               </Link>
             ))}
