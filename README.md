@@ -1,16 +1,29 @@
-# React + Vite
+# Medium Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Platform blogging modern yang terinspirasi dari Medium, dibangun dengan React dan Tailwind CSS.
 
-Currently, two official plugins are available:
+## Tentang Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ini adalah platform membaca artikel bergaya Medium di mana pengguna dapat menjelajahi, mencari, dan membaca artikel tentang berbagai topik teknologi. Aplikasi ini menampilkan desain yang bersih dan minimalis yang mengutamakan konten.
 
-## React Compiler
+## Fitur
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Menjelajahi artikel dari berbagai kategori
+- Fungsi pencarian untuk menemukan artikel
+- Desain responsif yang bekerja di semua perangkat
+- Pengalaman membaca yang bersih dan bebas gangguan
+- Kartu preview artikel dengan metadata
+- Navigasi yang ramah mobile
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 18** - Library UI
+- **React Router DOM** - Routing sisi klien
+- **Tailwind CSS** - Styling utility-first
+- **Lucide React** - Library ikon
+- **Moment** - Format tanggal
+- **React Markdown** - Rendering markdown
+
+### Preview
+
+![preview](public/gif/previw.gif)

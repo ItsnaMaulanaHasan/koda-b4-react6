@@ -8,7 +8,6 @@ function Article() {
   const [dataArticles, setDataArticles] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const { creator, slug } = useParams();
-  console.log(slug);
   const navigate = useNavigate();
 
   useEffect(() => {

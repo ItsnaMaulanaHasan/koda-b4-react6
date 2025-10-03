@@ -7,7 +7,6 @@ function SearchPage() {
   const [searchParams] = useSearchParams();
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  //   const navigate = useNavigate();
   const query = searchParams.get("q");
 
   useEffect(() => {
@@ -25,7 +24,6 @@ function SearchPage() {
           });
 
           setResults(filterArticles);
-          console.log("Search results:", filterArticles);
         })
         .catch((error) => {
           console.log("Gagal mendapatkan data: " + error);
@@ -49,7 +47,7 @@ function SearchPage() {
         </div>
         <div className="h-[1px] w-full bg-slate-300"></div>
         {results.map((article) => (
-          <Link to={`/${article.creator.name}/${article.slug}`}>
+          <Link key={article.id} to={`/${article.creator.name}/${article.slug}`}>
             <CardArticleSearch articleData={article} />
           </Link>
         ))}
