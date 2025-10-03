@@ -1,20 +1,37 @@
 import { SquarePen, Menu } from "lucide-react";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 function Navbar() {
+  const { register, handleSubmit } = useForm();
   const [openMenu, setOpenMenu] = useState(false);
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  const onSearch = (data) => {
+    if (data.search && data.search.trim()) {
+      const params = new URLSearchParams({ q: data.search });
+      navigate(`/search?${params.toString()}`);
+    }
+  };
+
+  const handleClick = () => {
+    navigate(`/`);
+  };
+
   return (
     <header>
       <nav className="bg-white z-2 fixed w-full px-4 sm:px-6 lg:px-10 py-5 top-0 md:h-auto h-25 content-end md:content-auto">
         <div className="flex justify-between items-center w-full">
           {/* Left Nav */}
           <div className="flex items-center h-10 gap-2 sm:gap-4 lg:gap-10 flex-1 min-w-0">
-            <img className="h-[20px] sm:h-[24px] lg:h-3/4 flex-shrink-0" src="/public/icon/Medium-Wordmark-Black.svg" alt="medium wordmark black" />
-            <form className="flex items-center px-3 h-[40px] w-full max-w-[200px] sm:max-w-xs lg:max-w-md bg-slate-50 gap-2 rounded-full">
+            <img onClick={handleClick} className="h-[20px] sm:h-[24px] lg:h-3/4 flex-shrink-0 cursor-pointer" src="/public/icon/Medium-Wordmark-Black.svg" alt="medium wordmark black" />
+            <form onSubmit={handleSubmit(onSearch)} className="flex items-center px-3 h-[40px] w-full max-w-[200px] sm:max-w-xs lg:max-w-md bg-slate-50 gap-2 rounded-full">
               <label htmlFor="search" className="h-full flex-shrink-0">
                 <img className="h-full w-[20px]" src="/public/icon/icon-search.svg" alt="icon search" />
               </label>
-              <input id="search" className="focus:outline-none bg-transparent w-full min-w-0" type="text" placeholder="Search" />
+              <input {...register("search")} id="search" className="focus:outline-none bg-transparent w-full min-w-0" type="text" placeholder="Search" defaultValue={searchParams.get("q")} />
             </form>
           </div>
 
@@ -32,13 +49,13 @@ function Navbar() {
           </div>
 
           {/* Hamburger Menu */}
-          <button onClick={() => setOpenMenu(!openMenu)} className="lg:hidden flex-shrink-0">
+          <button onClick={() => setOpenMenu(!openMenu)} className="md:hidden flex-shrink-0">
             <Menu className="cursor-pointer" />
           </button>
         </div>
         {/* Nav Mobile */}
         {openMenu && (
-          <div className="md:hidden flex flex-col gap-4 pt-4 pb-2 border-t border-gray-200 mt-4">
+          <div className="md:hidden flex flex-col gap-4 pt-4 pb-2 border-t border-gray-200 mt-4 bg-white">
             <button className="flex items-center gap-2 px-4 py-2 hover:bg-gray-50 rounded-lg transition text-left" onClick={() => setOpenMenu(false)}>
               <SquarePen size={20} />
               <span>Write</span>
