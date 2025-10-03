@@ -13,7 +13,7 @@ function CardArticleSearch({ articleData }) {
         </div>
         <div className="flex flex-col gap-2">
           <h1 className="font-bold text-xl sm:text-2xl md:text-3xl ">{articleData.title}</h1>
-          <p className="line-clamp-2 sm:line-clamp-3 text-sm sm:text-base text-gray-600">{articleData.content}</p>
+          <p className="line-clamp-2 sm:line-clamp-3 text-sm sm:text-base text-gray-600">{articleData.preview}</p>
         </div>
         <span className="text-sm text-[#6B6B6B]">{moment(articleData.publishedAt).fromNow()}</span>
       </div>

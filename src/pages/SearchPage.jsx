@@ -37,7 +37,7 @@ function SearchPage() {
   }, [query]);
 
   if (isLoading) {
-    return <div>Loading mas...</div>;
+    return <div className="flex justify-center items-center h-screen">Loading...</div>;
   }
 
   return (

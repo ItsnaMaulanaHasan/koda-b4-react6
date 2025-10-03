@@ -5,7 +5,8 @@
       "title": "Building Scalable React Applications in 2025",
       "slug": "building-scalable-react-applications-2025",
       "subtitle": "A comprehensive guide to modern React architecture patterns",
-      "content": "# Building Scalable React Applications\n\nReact has evolved significantly over the years, and building scalable applications requires a deep understanding of modern patterns and best practices. In this article, we'll explore the latest techniques for structuring large-scale React applications.\n\n## Component Architecture\n\nOne of the most important aspects is **component architecture**. Breaking down your application into small, reusable components is crucial. But it's not just about creating components—it's about creating the right abstraction levels.\n\n### Key Principles:\n\n- Keep components focused on a single responsibility\n- Use composition over inheritance\n- Create reusable UI components in a component library\n- Separate business logic from presentation\n\n## State Management Evolution\n\nState management has also evolved. While Redux was once the go-to solution, we now have more options:\n\n1. **Zustand** - Minimal and fast\n2. **Jotai** - Atomic state management\n3. **Context API** - Built-in React solution\n4. **TanStack Query** - For server state\n\nEach has its use case, and choosing the right one depends on your application's complexity.\n\n> \"The best state management solution is the one that solves your specific problem without adding unnecessary complexity.\"\n\n## Performance Optimization\n\nPerformance optimization is another critical factor. Techniques like:\n\n- Code splitting with `React.lazy()`\n- Lazy loading components\n- Memoization with `useMemo` and `useCallback`\n- Virtual scrolling for long lists\n\nReact 19 introduces new features that make optimization easier than ever.\n\n```javascript\n// Example: Code splitting\nconst HeavyComponent = React.lazy(() => import('./HeavyComponent'));\n\nfunction App() {\n  return (\n    <Suspense fallback={<Loading />}>\n      <HeavyComponent />\n    </Suspense>\n  );\n}\n```\n\n## Conclusion\n\nBuilding scalable React applications is an ongoing journey. Stay updated with the latest patterns, but don't chase every new trend. Focus on fundamentals and choose tools that genuinely solve your problems.",
+      "preview": "React has evolved significantly over the years, and building scalable applications requires a deep understanding of modern patterns and best practices. Learn about component architecture, state management options like Zustand and Jotai, and performance optimization techniques.",
+      "content": "# Building Scalable React Applications\n\nReact has evolved significantly over the years, and building scalable applications requires a deep understanding of modern patterns and best practices. In this article, we'll explore the latest techniques for structuring large-scale React applications.\n\n## Component Architecture\n\nOne of the most important aspects is **component architecture**. Breaking down your application into small, reusable components is crucial. But it's not just about creating components—it's about creating the right abstraction levels.\n\n### Key Principles:\n\n- Keep components focused on a single responsibility\n- Use composition over inheritance\n- Create reusable UI components in a component library\n- Separate business logic from presentation",
       "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800",
       "creator": {
         "id": "u1",
@@ -25,7 +26,8 @@
       "title": "The Future of AI and Machine Learning",
       "slug": "future-of-ai-machine-learning",
       "subtitle": "How artificial intelligence is reshaping industries",
-      "content": "# The Future of AI and Machine Learning\n\nArtificial Intelligence is no longer a futuristic concept—it's here, and it's transforming every industry imaginable. From healthcare to finance, AI is revolutionizing how we work and live.\n\n## The Current State of AI\n\nMachine learning models have become more sophisticated, capable of:\n\n- Understanding context and nuance\n- Generating creative content\n- Making complex decisions\n- Processing natural language\n\nThe breakthrough in **large language models** has opened doors we never thought possible.\n\n## Industry Applications\n\n### Healthcare\n\n- Diagnostic assistance\n- Drug discovery\n- Personalized treatment plans\n- Medical imaging analysis\n\n### Finance\n\n- Fraud detection\n- Algorithmic trading\n- Risk assessment\n- Customer service automation\n\n## Ethical Considerations\n\nHowever, with great power comes great responsibility. As AI becomes more integrated into our daily lives, questions about **ethics, privacy, and bias** become increasingly important.\n\n> \"We need to ensure that AI development is guided by strong ethical principles and serves humanity's best interests.\"\n\n### Key Concerns:\n\n1. **Bias in AI models** - Training data can perpetuate existing biases\n2. **Privacy concerns** - How is personal data being used?\n3. **Job displacement** - What happens to workers replaced by AI?\n4. **Accountability** - Who is responsible when AI makes mistakes?\n\n## Looking Ahead\n\nThe next decade will be crucial in determining how AI shapes our future. Will we use it to solve humanity's greatest challenges, or will we let it amplify existing inequalities?\n\n```python\n# Simple example of AI prediction\nimport tensorflow as tf\n\nmodel = tf.keras.Sequential([\n    tf.keras.layers.Dense(128, activation='relu'),\n    tf.keras.layers.Dense(10, activation='softmax')\n])\n\nmodel.compile(optimizer='adam', loss='categorical_crossentropy')\n```\n\nThe choice is ours to make.",
+      "preview": "Artificial Intelligence is no longer a futuristic concept—it's here, and it's transforming every industry imaginable. From healthcare to finance, discover how AI is revolutionizing the way we work and live, along with the ethical considerations we must address.",
+      "content": "# The Future of AI and Machine Learning\n\nArtificial Intelligence is no longer a futuristic concept—it's here, and it's transforming every industry imaginable. From healthcare to finance, AI is revolutionizing how we work and live.",
       "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800",
       "creator": {
         "id": "u2",
@@ -45,7 +47,8 @@
       "title": "Mastering CSS Grid and Flexbox",
       "slug": "mastering-css-grid-flexbox",
       "subtitle": "Modern layout techniques every developer should know",
-      "content": "# Mastering CSS Grid and Flexbox\n\nCSS has come a long way from the days of float-based layouts and table hacks. Today, we have powerful tools like **CSS Grid** and **Flexbox** that make creating complex layouts easier than ever.\n\n## Flexbox: One-Dimensional Layouts\n\nFlexbox is perfect for one-dimensional layouts. Whether you're arranging items in a row or column, Flexbox gives you precise control over:\n\n- Alignment\n- Distribution\n- Spacing\n- Order\n\n### Common Use Cases:\n\n```css\n/* Navigation Bar */\n.nav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n/* Card Layout */\n.card {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n```\n\n## CSS Grid: Two-Dimensional Layouts\n\nCSS Grid excels at two-dimensional layouts. It allows you to create complex grid structures with rows and columns, making it ideal for:\n\n1. Page layouts\n2. Image galleries\n3. Dashboards\n4. Magazine-style designs\n\n### Grid Example:\n\n```css\n.grid-container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 20px;\n}\n\n.sidebar {\n  grid-column: 1 / 2;\n  grid-row: 1 / 3;\n}\n```\n\n## Combining Both\n\nThe real power comes from **combining both**:\n\n> \"Use Grid for your overall page structure and Flexbox for component-level layouts.\"\n\nThis approach gives you maximum flexibility and maintainability.\n\n### Best Practices:\n\n- Use Grid for macro layouts (page structure)\n- Use Flexbox for micro layouts (components)\n- Always consider mobile-first design\n- Test across different screen sizes\n\n## Responsive Design\n\nBoth Grid and Flexbox work beautifully with media queries:\n\n```css\n.container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n}\n```\n\nThis creates a responsive grid that automatically adjusts based on available space.\n\n## Conclusion\n\nMastering both CSS Grid and Flexbox is essential for modern web development. They complement each other perfectly and solve different layout challenges.",
+      "preview": "CSS has come a long way from float-based layouts. Today, CSS Grid and Flexbox make creating complex layouts easier than ever. Learn when to use each, how to combine them effectively, and best practices for responsive design.",
+      "content": "# Mastering CSS Grid and Flexbox\n\nCSS has come a long way from the days of float-based layouts and table hacks. Today, we have powerful tools like **CSS Grid** and **Flexbox** that make creating complex layouts easier than ever.",
       "image": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=800",
       "creator": {
         "id": "u3",
@@ -65,7 +68,8 @@
       "title": "Building a Sustainable Tech Career",
       "slug": "building-sustainable-tech-career",
       "subtitle": "Lessons learned from 10 years in software development",
-      "content": "# Building a Sustainable Tech Career\n\nThe tech industry moves fast—sometimes too fast. In my decade as a software developer, I've learned that building a sustainable career isn't about chasing every new framework or technology. It's about developing **fundamental skills** and maintaining **work-life balance**.\n\n## Focus on Principles Over Tools\n\nLanguages and frameworks come and go, but core concepts remain constant:\n\n- **Algorithms** - How to solve problems efficiently\n- **Data Structures** - Organizing data effectively\n- **System Design** - Building scalable systems\n- **Clean Code** - Writing maintainable code\n\n> \"Master the fundamentals, and you'll adapt to any technology.\"\n\n## Mental Health Matters\n\nBurnout is real in this industry. Here's what I've learned:\n\n### Set Boundaries\n\n- No work emails after 6 PM\n- Weekends are for rest\n- Take your vacation days\n- Learn to say no\n\n### Practice Self-Care\n\n1. Regular exercise\n2. Adequate sleep (7-8 hours)\n3. Hobbies outside of tech\n4. Social connections\n\n## Strategic Learning\n\nYou don't need to learn everything. Be strategic:\n\n```markdown\n### Questions to Ask:\n\n- Does this align with my career goals?\n- Is this technology mature enough?\n- Will this solve a real problem I have?\n- Do I genuinely find this interesting?\n```\n\nIf the answer is no to most of these, it's okay to skip it.\n\n## Build Your Network\n\nYour network is your net worth. The people you work with today might be:\n\n- Future colleagues\n- Business partners\n- Mentors\n- Job references\n\n### Networking Tips:\n\n- Attend local meetups\n- Contribute to open source\n- Share your knowledge through blogs\n- Help others without expecting anything in return\n\n## Continuous Growth\n\nStay curious but don't overwhelm yourself:\n\n| Area | Time Investment |\n|------|----------------|\n| Deep work (coding) | 60% |\n| Learning new skills | 20% |\n| Networking | 10% |\n| Rest and reflection | 10% |\n\n## Final Thoughts\n\nA sustainable tech career is a marathon, not a sprint. Take care of yourself, keep learning, and remember why you started coding in the first place.\n\n**Your health and happiness matter more than any job or technology.**",
+      "preview": "The tech industry moves fast—sometimes too fast. In a decade as a software developer, learn why building a sustainable career isn't about chasing every new framework, but developing fundamental skills and maintaining work-life balance.",
+      "content": "# Building a Sustainable Tech Career\n\nThe tech industry moves fast—sometimes too fast. In my decade as a software developer, I've learned that building a sustainable career isn't about chasing every new framework or technology.",
       "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800",
       "creator": {
         "id": "u4",
@@ -85,7 +89,8 @@
       "title": "Introduction to TypeScript for Beginners",
       "slug": "introduction-typescript-beginners",
       "subtitle": "Why TypeScript is taking over the JavaScript world",
-      "content": "# Introduction to TypeScript for Beginners\n\nTypeScript has become the **de facto standard** for modern JavaScript development, and for good reason. It adds static typing to JavaScript, catching errors before they reach production.\n\n## Why TypeScript?\n\nIf you're coming from vanilla JavaScript, TypeScript might seem intimidating at first. But the learning curve is gentler than you think.\n\n### Key Benefits:\n\n1. **Type Safety** - Catch bugs at compile time\n2. **Better IDE Support** - Intelligent autocomplete\n3. **Self-Documenting Code** - Types serve as documentation\n4. **Refactoring Confidence** - Safe code transformations\n\n## Getting Started\n\nYou can start by adding type annotations gradually:\n\n```typescript\n// JavaScript\nfunction add(a, b) {\n  return a + b;\n}\n\n// TypeScript\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\n\nSee? Not scary at all!\n\n## Basic Types\n\nTypeScript provides several basic types:\n\n```typescript\n// Primitives\nlet name: string = \"John\";\nlet age: number = 30;\nlet isActive: boolean = true;\n\n// Arrays\nlet numbers: number[] = [1, 2, 3];\nlet strings: Array<string> = [\"a\", \"b\", \"c\"];\n\n// Objects\ninterface User {\n  id: number;\n  name: string;\n  email?: string; // Optional property\n}\n\nconst user: User = {\n  id: 1,\n  name: \"John Doe\"\n};\n```\n\n## Interfaces vs Types\n\nBoth define object shapes, but have subtle differences:\n\n```typescript\n// Interface (can be extended)\ninterface Person {\n  name: string;\n}\n\ninterface Employee extends Person {\n  employeeId: number;\n}\n\n// Type (more flexible)\ntype Point = {\n  x: number;\n  y: number;\n};\n\ntype ID = string | number; // Union types\n```\n\n## Generics\n\nGenerics make your code reusable:\n\n```typescript\nfunction identity<T>(arg: T): T {\n  return arg;\n}\n\nlet output1 = identity<string>(\"hello\");\nlet output2 = identity<number>(42);\n```\n\n## TypeScript in React\n\nTypeScript shines in React development:\n\n```typescript\ninterface ButtonProps {\n  label: string;\n  onClick: () => void;\n  disabled?: boolean;\n}\n\nconst Button: React.FC<ButtonProps> = ({ label, onClick, disabled }) => {\n  return (\n    <button onClick={onClick} disabled={disabled}>\n      {label}\n    </button>\n  );\n};\n```\n\n## Common Pitfalls\n\n> **Avoid using `any`** - It defeats the purpose of TypeScript\n\nInstead, use:\n- `unknown` for truly unknown types\n- Proper type definitions\n- Generics for flexible types\n\n## The Ecosystem\n\nMost modern tools have excellent TypeScript support:\n\n- ✅ ESLint with TypeScript\n- ✅ Prettier\n- ✅ Jest for testing\n- ✅ All major frameworks (React, Vue, Angular)\n\n## Conclusion\n\nStarting with TypeScript today means investing in your future as a developer. Most new projects and companies are adopting it, making it an essential skill for modern web development.\n\n**Start small, be patient, and enjoy the journey!**",
+      "preview": "TypeScript has become the de facto standard for modern JavaScript development. Discover why adding static typing catches errors before production, provides better IDE support, and makes your code self-documenting.",
+      "content": "# Introduction to TypeScript for Beginners\n\nTypeScript has become the **de facto standard** for modern JavaScript development, and for good reason. It adds static typing to JavaScript, catching errors before they reach production.",
       "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800",
       "creator": {
         "id": "u5",
@@ -105,7 +110,8 @@
       "title": "The Art of API Design",
       "slug": "art-of-api-design",
       "subtitle": "Creating intuitive and scalable APIs",
-      "content": "# The Art of API Design\n\nA well-designed API is like a good conversation—it's **intuitive, consistent, and pleasant** to work with. Poor API design, on the other hand, can make developers' lives miserable.\n\n## First Principle: Consistency\n\nThe first principle of good API design is **consistency**. Use the same:\n\n- Naming conventions\n- Error handling patterns\n- Response structures\n- Authentication methods\n\nThis predictability helps developers build mental models quickly.\n\n## RESTful Conventions\n\nFollow HTTP methods correctly:\n\n| Method | Purpose | Example |\n|--------|---------|----------|\n| GET | Read data | `GET /users/123` |\n| POST | Create new | `POST /users` |\n| PUT | Full update | `PUT /users/123` |\n| PATCH | Partial update | `PATCH /users/123` |\n| DELETE | Remove | `DELETE /users/123` |\n\n### Status Codes Matter\n\n```http\n200 OK - Success\n201 Created - Resource created\n400 Bad Request - Invalid input\n401 Unauthorized - Not authenticated\n403 Forbidden - No permission\n404 Not Found - Resource doesn't exist\n500 Internal Server Error - Server error\n```\n\n## Versioning Strategy\n\nYour API will evolve. Plan for it:\n\n```\n# URL Versioning (Simple & Explicit)\nhttps://api.example.com/v1/users\nhttps://api.example.com/v2/users\n\n# Header Versioning\nAccept: application/vnd.api+json; version=1\n```\n\n### Migration Path\n\n1. Release new version\n2. Deprecate old version\n3. Provide migration guide\n4. Give developers time (6-12 months)\n5. Sunset old version\n\n## Error Handling\n\nProvide helpful error messages:\n\n```json\n{\n  \"error\": {\n    \"code\": \"INVALID_EMAIL\",\n    \"message\": \"The email address format is invalid\",\n    \"field\": \"email\",\n    \"value\": \"notanemail\"\n  }\n}\n```\n\n> \"Good error messages help developers fix issues quickly.\"\n\n## Pagination\n\nDon't return thousands of records at once:\n\n```json\n{\n  \"data\": [...],\n  \"pagination\": {\n    \"page\": 1,\n    \"per_page\": 20,\n    \"total\": 156,\n    \"total_pages\": 8\n  },\n  \"links\": {\n    \"next\": \"/users?page=2\",\n    \"prev\": null\n  }\n}\n```\n\n## Documentation\n\nDocumentation isn't optional—it's part of your API:\n\n### Use OpenAPI/Swagger\n\n```yaml\nopenapi: 3.0.0\ninfo:\n  title: User API\n  version: 1.0.0\npaths:\n  /users:\n    get:\n      summary: List all users\n      parameters:\n        - name: page\n          in: query\n          schema:\n            type: integer\n```\n\n## Security Best Practices\n\n- ✅ Use HTTPS everywhere\n- ✅ Implement rate limiting\n- ✅ Validate all input\n- ✅ Use OAuth 2.0 for authentication\n- ✅ Never expose sensitive data\n\n### Rate Limiting Example\n\n```http\nX-RateLimit-Limit: 1000\nX-RateLimit-Remaining: 999\nX-RateLimit-Reset: 1234567890\n```\n\n## API Design Checklist\n\n- [ ] Consistent naming conventions\n- [ ] Proper HTTP methods\n- [ ] Meaningful status codes\n- [ ] Clear error messages\n- [ ] Pagination for lists\n- [ ] Versioning strategy\n- [ ] Authentication & authorization\n- [ ] Rate limiting\n- [ ] Comprehensive documentation\n- [ ] Example requests/responses\n\n## Conclusion\n\nGreat API design is about **empathy**—understanding your developers' needs and making their lives easier. Take time to design thoughtfully, and your API will be a joy to use.",
+      "preview": "A well-designed API is like a good conversation—intuitive, consistent, and pleasant to work with. Learn the principles of great API design, from RESTful conventions to versioning strategies and comprehensive documentation.",
+      "content": "# The Art of API Design\n\nA well-designed API is like a good conversation—it's **intuitive, consistent, and pleasant** to work with. Poor API design, on the other hand, can make developers' lives miserable.",
       "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
       "creator": {
         "id": "u6",
@@ -125,7 +131,8 @@
       "title": "Mindfulness for Developers",
       "slug": "mindfulness-for-developers",
       "subtitle": "How meditation changed my coding life",
-      "content": "# Mindfulness for Developers\n\nAs developers, we spend hours in front of screens, solving complex problems and debugging frustrating issues. The **mental toll** can be significant, leading to stress, anxiety, and burnout.\n\n## My Journey\n\nI discovered mindfulness meditation three years ago, and it transformed how I approach both coding and life. Starting with just **10 minutes a day**, I learned to:\n\n- Observe my thoughts without judgment\n- Stay present in the moment\n- Respond rather than react\n- Accept things as they are\n\n## Benefits for Coding\n\nThe benefits were unexpected but profound:\n\n### 1. Improved Focus\n\n> \"I became better at focusing on one problem at a time, rather than letting my mind race ahead.\"\n\nInstead of jumping between tasks, I learned to give my full attention to what I'm working on right now.\n\n### 2. Better Debugging\n\nMy debugging improved because I could approach problems with a **calmer, clearer mind**. No more frustration spirals!\n\n### 3. Reduced Imposter Syndrome\n\nMindfulness helped with imposter syndrome—that nagging feeling that I'm not good enough. By observing these thoughts without attaching to them, I could see them for what they were: **just thoughts, not reality**.\n\n## Getting Started\n\nYou don't need anything special to start:\n\n### Simple Breathing Exercise\n\n```markdown\n1. Sit comfortably\n2. Close your eyes\n3. Focus on your breath\n4. Count: Inhale (1-2-3-4), Exhale (1-2-3-4)\n5. When your mind wanders, gently return to breath\n6. Continue for 5-10 minutes\n```\n\n### Mindful Coding Practice\n\nBring mindfulness to your coding:\n\n- **Before coding**: Take 3 deep breaths\n- **During debugging**: Notice frustration arising, breathe\n- **After solving**: Pause and appreciate the solution\n- **Breaks**: Step away from screen, stretch, breathe\n\n## Apps I Recommend\n\n1. **Headspace** - Great for beginners\n2. **Calm** - Soothing interface\n3. **Insight Timer** - Free with thousands of meditations\n4. **Oak** - Simple and minimalist\n\n## Common Misconceptions\n\n### \"I don't have time\"\n\nStart with just 5 minutes. That's less than one YouTube video.\n\n### \"I can't stop thinking\"\n\nThat's normal! Meditation isn't about stopping thoughts—it's about changing your relationship with them.\n\n### \"It's too woo-woo\"\n\nMindfulness is backed by science. Studies show it:\n\n- Reduces stress and anxiety\n- Improves focus and memory\n- Enhances emotional regulation\n- Boosts creativity\n\n## My Daily Practice\n\nHere's what works for me:\n\n| Time | Duration | Practice |\n|------|----------|----------|\n| Morning | 10 min | Meditation |\n| Before lunch | 5 min | Breathing |\n| Mid-afternoon | 5 min | Walking meditation |\n| Before bed | 10 min | Body scan |\n\n## Dealing with Stress\n\nWhen you feel stressed:\n\n1. **STOP** - Pause what you're doing\n2. **TAKE A BREATH** - Three deep breaths\n3. **OBSERVE** - Notice what you're feeling\n4. **PROCEED** - Continue with awareness\n\n## The Coding Connection\n\nMindfulness and coding share similarities:\n\n```python\n# Both require:\n- Focus and attention\n- Patience with the process\n- Acceptance of errors\n- Iteration and refinement\n- Present moment awareness\n```\n\n## Words of Encouragement\n\nIf you're feeling overwhelmed or stressed in your tech career, I encourage you to give mindfulness a try.\n\n**Start small, be consistent, and be patient with yourself.**\n\nYou're not trying to become a meditation master. You're just learning to be present with whatever arises—in your code and in your life.\n\n## Resources\n\n- 📚 \"The Miracle of Mindfulness\" by Thich Nhat Hanh\n- 📚 \"Wherever You Go, There You Are\" by Jon Kabat-Zinn\n- 🎧 Tara Brach's podcast\n- 🌐 /r/Mindfulness on Reddit\n\n---\n\n*Remember: Your mental health is more important than any deadline or feature. Take care of yourself.*",
+      "preview": "As developers, we spend hours solving complex problems, which takes a mental toll. Discover how mindfulness meditation can improve focus, enhance debugging skills, and reduce imposter syndrome through simple daily practices.",
+      "content": "# Mindfulness for Developers\n\nAs developers, we spend hours in front of screens, solving complex problems and debugging frustrating issues. The **mental toll** can be significant, leading to stress, anxiety, and burnout.",
       "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800",
       "creator": {
         "id": "u7",
@@ -139,6 +146,279 @@
       "tags": ["Mindfulness", "Mental Health", "Productivity", "Wellness"],
       "claps": 4567,
       "comments": 287
+    },
+    {
+      "id": "8",
+      "title": "Docker and Kubernetes for Beginners",
+      "slug": "docker-kubernetes-beginners",
+      "subtitle": "Containerization made simple",
+      "preview": "Containers have revolutionized how we deploy applications. Learn the fundamentals of Docker for packaging applications and Kubernetes for orchestrating them at scale, with practical examples and best practices.",
+      "content": "# Docker and Kubernetes for Beginners\n\nContainers have revolutionized application deployment. Docker packages applications with their dependencies, while Kubernetes orchestrates containers at scale. This guide covers everything from basic concepts to production deployments.",
+      "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800",
+      "creator": {
+        "id": "u8",
+        "name": "Robert Singh",
+        "username": "rob_devops",
+        "avatar": "https://i.pravatar.cc/150?img=8",
+        "bio": "DevOps Engineer | Cloud Architect | Container Enthusiast"
+      },
+      "publishedAt": "2025-09-10T15:00:00Z",
+      "readTime": 11,
+      "tags": ["Docker", "Kubernetes", "DevOps", "Cloud"],
+      "claps": 1892,
+      "comments": 156
+    },
+    {
+      "id": "9",
+      "title": "Understanding Web Performance",
+      "slug": "understanding-web-performance",
+      "subtitle": "Making your website lightning fast",
+      "preview": "Every millisecond counts in web performance. Users expect instant loading times. Explore techniques like code splitting, lazy loading, image optimization, and caching strategies to dramatically improve your site speed.",
+      "content": "# Understanding Web Performance\n\nWeb performance directly impacts user experience and business metrics. A one-second delay can reduce conversions by 7%. Learn how to measure, optimize, and maintain fast-loading websites.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      "creator": {
+        "id": "u9",
+        "name": "Lisa Wang",
+        "username": "lisa_perf",
+        "avatar": "https://i.pravatar.cc/150?img=9",
+        "bio": "Performance Engineer | Web Optimization Specialist"
+      },
+      "publishedAt": "2025-09-08T10:30:00Z",
+      "readTime": 8,
+      "tags": ["Performance", "Optimization", "Web Development"],
+      "claps": 2341,
+      "comments": 178
+    },
+    {
+      "id": "10",
+      "title": "GraphQL vs REST: Choosing the Right API",
+      "slug": "graphql-vs-rest",
+      "subtitle": "When to use each approach",
+      "preview": "Both GraphQL and REST have their place in modern development. Understand the strengths and weaknesses of each approach, when to choose one over the other, and how to implement them effectively.",
+      "content": "# GraphQL vs REST: Choosing the Right API\n\nThe debate between GraphQL and REST continues, but the truth is both have valid use cases. Understanding when to use each is key to building efficient APIs.",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+      "creator": {
+        "id": "u10",
+        "name": "Tom Anderson",
+        "username": "tom_graphql",
+        "avatar": "https://i.pravatar.cc/150?img=10",
+        "bio": "API Developer | GraphQL Contributor | Tech Speaker"
+      },
+      "publishedAt": "2025-09-05T14:20:00Z",
+      "readTime": 9,
+      "tags": ["GraphQL", "REST", "API", "Backend"],
+      "claps": 1678,
+      "comments": 134
+    },
+    {
+      "id": "11",
+      "title": "Accessibility: Building for Everyone",
+      "slug": "web-accessibility-guide",
+      "subtitle": "Making the web inclusive",
+      "preview": "Web accessibility isn't optional—it's essential. Learn how to build websites that work for everyone, including people with disabilities. Covers ARIA labels, keyboard navigation, screen readers, and WCAG guidelines.",
+      "content": "# Accessibility: Building for Everyone\n\nWeb accessibility ensures that people with disabilities can use your website. It's not just ethical—in many countries, it's legally required. Learn the fundamentals of building accessible web applications.",
+      "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800",
+      "creator": {
+        "id": "u11",
+        "name": "Jennifer Lee",
+        "username": "jen_a11y",
+        "avatar": "https://i.pravatar.cc/150?img=11",
+        "bio": "Accessibility Advocate | UX Designer | WCAG Expert"
+      },
+      "publishedAt": "2025-09-03T09:15:00Z",
+      "readTime": 7,
+      "tags": ["Accessibility", "Web Design", "UX", "Inclusion"],
+      "claps": 3245,
+      "comments": 201
+    },
+    {
+      "id": "12",
+      "title": "Mastering Git and GitHub",
+      "slug": "mastering-git-github",
+      "subtitle": "Version control best practices",
+      "preview": "Git is essential for modern development. Master branching strategies, commit conventions, pull requests, and collaboration workflows. Learn advanced techniques like rebasing, cherry-picking, and conflict resolution.",
+      "content": "# Mastering Git and GitHub\n\nGit is more than just saving your code—it's about collaboration, history, and workflow. Understanding Git deeply makes you a more effective developer and better team member.",
+      "image": "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800",
+      "creator": {
+        "id": "u12",
+        "name": "Chris Brown",
+        "username": "chris_git",
+        "avatar": "https://i.pravatar.cc/150?img=12",
+        "bio": "Senior Developer | Git Workshop Instructor | Open Source Maintainer"
+      },
+      "publishedAt": "2025-09-01T11:00:00Z",
+      "readTime": 10,
+      "tags": ["Git", "GitHub", "Version Control", "Workflow"],
+      "claps": 2567,
+      "comments": 189
+    },
+    {
+      "id": "13",
+      "title": "Testing React Applications",
+      "slug": "testing-react-applications",
+      "subtitle": "From unit tests to end-to-end",
+      "preview": "Testing ensures your React app works as expected. Learn about unit testing with Jest, component testing with React Testing Library, and end-to-end testing with Playwright. Includes practical examples and best practices.",
+      "content": "# Testing React Applications\n\nTesting gives you confidence that your code works. Learn how to write effective tests for React components, hooks, and entire user flows using modern testing tools.",
+      "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800",
+      "creator": {
+        "id": "u13",
+        "name": "Amanda Garcia",
+        "username": "amanda_testing",
+        "avatar": "https://i.pravatar.cc/150?img=13",
+        "bio": "QA Engineer | Test Automation Specialist | React Developer"
+      },
+      "publishedAt": "2025-08-29T13:45:00Z",
+      "readTime": 12,
+      "tags": ["Testing", "React", "Jest", "Quality Assurance"],
+      "claps": 1923,
+      "comments": 167
+    },
+    {
+      "id": "14",
+      "title": "Database Design Fundamentals",
+      "slug": "database-design-fundamentals",
+      "subtitle": "From SQL to NoSQL",
+      "preview": "Good database design is crucial for scalable applications. Understand normalization, indexing, relationships, and when to choose SQL vs NoSQL. Learn through real-world examples and common pitfalls to avoid.",
+      "content": "# Database Design Fundamentals\n\nDatabase design affects everything—performance, scalability, and maintainability. Learn the principles of good database design and when to use different database types.",
+      "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800",
+      "creator": {
+        "id": "u14",
+        "name": "Ryan Thompson",
+        "username": "ryan_db",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "bio": "Database Architect | SQL Expert | Data Engineer"
+      },
+      "publishedAt": "2025-08-27T10:00:00Z",
+      "readTime": 11,
+      "tags": ["Database", "SQL", "NoSQL", "Backend"],
+      "claps": 2134,
+      "comments": 145
+    },
+    {
+      "id": "15",
+      "title": "Microservices Architecture Explained",
+      "slug": "microservices-architecture",
+      "subtitle": "Breaking down the monolith",
+      "preview": "Microservices offer scalability and flexibility but come with complexity. Learn when microservices make sense, how to design them effectively, and common patterns for service communication and data management.",
+      "content": "# Microservices Architecture Explained\n\nMicroservices architecture breaks applications into small, independent services. Each service handles a specific business capability and can be developed, deployed, and scaled independently.",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+      "creator": {
+        "id": "u15",
+        "name": "Patricia Wilson",
+        "username": "pat_micro",
+        "avatar": "https://i.pravatar.cc/150?img=15",
+        "bio": "Solutions Architect | Microservices Expert | Cloud Native Advocate"
+      },
+      "publishedAt": "2025-08-24T15:30:00Z",
+      "readTime": 13,
+      "tags": ["Microservices", "Architecture", "Backend", "Scalability"],
+      "claps": 2876,
+      "comments": 198
+    },
+    {
+      "id": "16",
+      "title": "State Management in Modern React",
+      "slug": "state-management-modern-react",
+      "subtitle": "Beyond Redux",
+      "preview": "State management has evolved beyond Redux. Explore modern solutions like Zustand, Jotai, Recoil, and when to use built-in React features. Learn to choose the right tool for your application's needs.",
+      "content": "# State Management in Modern React\n\nThe state management landscape has evolved dramatically. While Redux remains popular, new libraries offer simpler alternatives. Learn when to use each approach.",
+      "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800",
+      "creator": {
+        "id": "u16",
+        "name": "Kevin Zhang",
+        "username": "kevin_state",
+        "avatar": "https://i.pravatar.cc/150?img=16",
+        "bio": "React Core Team | State Management Enthusiast | Conference Speaker"
+      },
+      "publishedAt": "2025-08-22T09:30:00Z",
+      "readTime": 9,
+      "tags": ["React", "State Management", "JavaScript", "Frontend"],
+      "claps": 3456,
+      "comments": 234
+    },
+    {
+      "id": "17",
+      "title": "Secure Coding Practices",
+      "slug": "secure-coding-practices",
+      "subtitle": "Protecting your applications",
+      "preview": "Security isn't an afterthought—it's essential from day one. Learn about common vulnerabilities like XSS, CSRF, and SQL injection, plus best practices for authentication, authorization, and data protection.",
+      "content": "# Secure Coding Practices\n\nSecurity breaches can destroy businesses. Every developer must understand security fundamentals. Learn how to write secure code and protect user data.",
+      "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800",
+      "creator": {
+        "id": "u17",
+        "name": "Rachel Adams",
+        "username": "rachel_sec",
+        "avatar": "https://i.pravatar.cc/150?img=17",
+        "bio": "Security Engineer | Ethical Hacker | OWASP Contributor"
+      },
+      "publishedAt": "2025-08-19T14:00:00Z",
+      "readTime": 10,
+      "tags": ["Security", "Best Practices", "Web Development"],
+      "claps": 2789,
+      "comments": 176
+    },
+    {
+      "id": "18",
+      "title": "Building Progressive Web Apps",
+      "slug": "building-progressive-web-apps",
+      "subtitle": "The future of mobile web",
+      "preview": "Progressive Web Apps combine the best of web and mobile apps. Learn how to make your web app installable, work offline, send push notifications, and provide native-like experiences using service workers.",
+      "content": "# Building Progressive Web Apps\n\nProgressive Web Apps offer app-like experiences through the web. They work offline, can be installed, and send push notifications—all without app stores.",
+      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800",
+      "creator": {
+        "id": "u18",
+        "name": "Daniel Martinez",
+        "username": "dan_pwa",
+        "avatar": "https://i.pravatar.cc/150?img=18",
+        "bio": "Mobile Web Developer | PWA Advocate | Google Developer Expert"
+      },
+      "publishedAt": "2025-08-16T11:20:00Z",
+      "readTime": 8,
+      "tags": ["PWA", "Mobile", "Web Development", "Service Workers"],
+      "claps": 1845,
+      "comments": 142
+    },
+    {
+      "id": "19",
+      "title": "Functional Programming in JavaScript",
+      "slug": "functional-programming-javascript",
+      "subtitle": "Writing cleaner, more maintainable code",
+      "preview": "Functional programming makes code more predictable and testable. Discover concepts like pure functions, immutability, higher-order functions, and composition. Learn how to apply functional principles in JavaScript.",
+      "content": "# Functional Programming in JavaScript\n\nFunctional programming principles can make your JavaScript code more predictable, testable, and maintainable. Learn core concepts and how to apply them.",
+      "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800",
+      "creator": {
+        "id": "u19",
+        "name": "Sophie Turner",
+        "username": "sophie_fp",
+        "avatar": "https://i.pravatar.cc/150?img=19",
+        "bio": "Functional Programming Expert | JavaScript Developer | Tech Writer"
+      },
+      "publishedAt": "2025-08-13T10:00:00Z",
+      "readTime": 11,
+      "tags": ["JavaScript", "Functional Programming", "Clean Code"],
+      "claps": 2234,
+      "comments": 167
+    },
+    {
+      "id": "20",
+      "title": "Career Growth for Software Engineers",
+      "slug": "career-growth-software-engineers",
+      "subtitle": "From junior to senior and beyond",
+      "preview": "Career progression isn't just about technical skills. Learn how to advance from junior to senior engineer and beyond, including technical leadership, communication, mentoring, and navigating organizational politics.",
+      "content": "# Career Growth for Software Engineers\n\nAdvancing your career requires more than coding skills. Learn what it takes to progress from junior to senior engineer, tech lead, and beyond.",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800",
+      "creator": {
+        "id": "u20",
+        "name": "Marcus Johnson",
+        "username": "marcus_career",
+        "avatar": "https://i.pravatar.cc/150?img=20",
+        "bio": "Engineering Director | Career Coach | Leadership Mentor"
+      },
+      "publishedAt": "2025-08-10T16:00:00Z",
+      "readTime": 9,
+      "tags": ["Career", "Leadership", "Growth", "Advice"],
+      "claps": 4123,
+      "comments": 289
     }
   ]
 }

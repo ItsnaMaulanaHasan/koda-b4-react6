@@ -64,7 +64,7 @@ function HomePage() {
             <img className="w-full md:max-w-1/2" src={topArticle.image} alt={topArticle.title} />
             <div className="flex flex-col gap-2 sm:gap-3 w-full md:w-1/2">
               <h1 className="font-semibold text-2xl sm:text-3xl md:text-4xl line-clamp-2">{topArticle.title}</h1>
-              <p className="line-clamp-3 sm:line-clamp-4 text-sm sm:text-base text-gray-700">{topArticle.content}</p>
+              <p className="line-clamp-3 sm:line-clamp-4 text-sm sm:text-base text-gray-700">{topArticle.preview}</p>
               <div className="flex gap-2 items-center text-gray-500 text-xs sm:text-sm">
                 <img className="rounded-full h-5 w-5 sm:h-6 sm:w-6 object-cover" src={topArticle.creator.avatar} alt={topArticle.creator.name} />
                 <span className="truncate max-w-[120px] sm:max-w-none">{topArticle.creator.name}</span>
