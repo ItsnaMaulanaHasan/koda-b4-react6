@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import moment from "moment";
 import { Link, useNavigate } from "react-router-dom";
 import { getData } from "../utils/getData";
@@ -29,7 +28,6 @@ function HomePage() {
 
   return (
     <>
-      <Navbar />
       <main>
         {/* Image header */}
         <div className="h-[200px] sm:h-[250px] md:h-[300px] w-full overflow-hidden">

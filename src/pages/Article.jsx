@@ -1,6 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
 import { getData } from "../utils/getData";
 import moment from "moment";
 import Markdown from "react-markdown";
@@ -26,7 +25,6 @@ function Article() {
 
   return (
     <>
-      <Navbar />
       <main>
         <nav className="px-4 md:px-10 lg:px-40 bg-white py-5 w-full border-b border-slate-300 mt-25 md:mt-20">
           <button onClick={() => navigate("/")} className="font-semibold text-lg md:text-xl cursor-pointer">
